@@ -1,0 +1,14 @@
+services:
+  mysql:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+    container_name: database_test
+    ports:
+      - "3306:3306"
+    volumes:
+      #This is the volume that will be mounted
+      - ./data:/var/lib/mysql:rw
