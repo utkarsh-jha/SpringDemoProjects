@@ -14,8 +14,6 @@ public class SpringJpaTestApplication {
         SpringApplication.run(SpringJpaTestApplication.class, args);
         repository.save(new User(1l, "RAM"));
         repository.save(new User(2l, "SHAAM"));
-        System.out.printf(repository.getReferenceById(1L).toString());
-        System.out.printf(repository.getReferenceById(2L).toString());
     }
 
     @Autowired

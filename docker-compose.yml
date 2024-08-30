@@ -1,11 +1,12 @@
 services:
   mysql:
-    image: mariadb:latest
+    #usemysql
+    image: mysql:latest
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root1
       MYSQL_DATABASE: mydb
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
+      MYSQL_USER: root1
+      MYSQL_PASSWORD: root1
     container_name: database_test
     ports:
       - "3306:3306"
